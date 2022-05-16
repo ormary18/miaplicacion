@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: bisque;
+
+}
+
+
+.logo {
+    padding: 10px; 
+    margin-right: 300px; 
+    display: block; 
+    width: 250px; 
+
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-ecommerce {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items:center;
+}
+
+.menu-ecommerce button{
+  
+    text-decoration: none;
+    padding: 15px;
+}
+@keyframes NavBar-logo {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
