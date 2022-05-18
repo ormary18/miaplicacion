@@ -1,6 +1,8 @@
 import React from 'react';
 import './Navbar.css';
-import Logo from './Img/Logo.png'
+import Logo from './Img/Logo.png';
+import CarWidget from '../components/CarWidget/CarWidget';
+
 
 const NavBar = () => {
   return (
@@ -15,6 +17,7 @@ const NavBar = () => {
         <button>Blog</button>
 
       </div>
+      <CarWidget />
     </nav>
   );
 };
