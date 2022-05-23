@@ -1,7 +1,7 @@
 import React from 'react';
 import './Navbar.css';
 import Logo from './Img/Logo.png';
-import CarWidget from '../components/CarWidget/CarWidget';
+import CarWidget from '../CarWidget/CarWidget';
 
 
 const NavBar = () => {
