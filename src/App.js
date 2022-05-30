@@ -5,14 +5,23 @@ import NavBar from './components/NavBar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemCount from './components/ItemCount/ItemCount';
 
+
+
+
+
 function App() {
-  const [show, setShow] =useState(true)
       
   return (
     <div className="App">
         <NavBar /> 
-        <ItemListContainer greeting = "Arte por el Mundo"/>
-        <ItemCount/>
+        <ItemListContainer/>
+        <ItemCount />
+       
+        
+        
+
+       
+       
 
         
     </div>
