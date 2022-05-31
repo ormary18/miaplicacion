@@ -4,6 +4,7 @@ import Logo from './Img/Logo.png';
 import CarWidget from '../CarWidget/CarWidget';
 
 
+
 const NavBar = () => {
   return (
     <nav>
