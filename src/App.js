@@ -3,7 +3,8 @@ import { useState } from 'react';
 import './App.css';
 import NavBar from './components/NavBar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import ItemCount from './components/ItemCount/ItemCount';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+
 
 
 
@@ -15,7 +16,8 @@ function App() {
     <div className="App">
         <NavBar /> 
         <ItemListContainer/>
-        <ItemCount stock={10}/>
+       <ItemDetailContainer />
+
        
         
         

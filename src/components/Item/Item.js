@@ -1,23 +1,13 @@
 import React from 'react';
 
 
-function Item ({imagen, subtitulo, nombre, descripcion, precio, id, stock}) {
 
-    return(
-        <div className="tarjeta">
-            <div className='cardContenedor'>
-                <div className='cardImg'><img src={imagen} alt="imagenes de productos"></img></div>
-                <div className='cardTexto'>
-                    <p>{id}</p>
-                    <p> {subtitulo}</p>
-                    <h2>{nombre}</h2>                                       
-                </div>
-                <p className='descripcion'>{descripcion} </p> 
-                <p className='precio'>{precio}</p>
-                              
-            </div>
-        </div>
+const Item = ({id, name, price}) => {
+    return (
+        <h1>{name}</h1>
+       
     )
-}
+};
+
 
 export default Item;
