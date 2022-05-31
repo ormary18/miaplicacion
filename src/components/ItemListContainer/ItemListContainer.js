@@ -15,7 +15,6 @@ const ItemListContainer = ({ greeting }) => {
         })
     }, [])
    
-    console.log('antes de montar')
 
     return(
         <div className='ItemListContainer'>
