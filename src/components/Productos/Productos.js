@@ -1,13 +1,12 @@
-import React from "react";
 
 
 const products = [
     { 
         id: '1', 
         name: 'Cuadro Personalizado', 
+        img: './imagen/cuadro1.jpg',
         price: 50, 
         category: 'Arte', 
-        img:'./imagen/cuadro1.jpg', 
         stock: 15, 
         description:'Un regalo a la medida, un cuadro personalizado con todas las caracteristicas del cliente'
     },
@@ -16,7 +15,7 @@ const products = [
     name: 'Taza personalizada', 
     price: 30, 
     category: 'Arte', 
-    img:'./imagen/Taza.jpg', 
+    img:'./imagen/Taza.jpg',
     stock: 10, 
     description:'Taza personalizada blanco y negro con caja y envoltura para regalo'},
 
@@ -35,6 +34,30 @@ export const getProducts = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products)
-        }, 2000)
+        }, 500)
+    })
+}
+
+export const getProductsId = (id) => {
+    return new Promise (resolve => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.id === id))
+        }, 500)
+    })
+}
+
+export const getProductsByCategory = (categoryId) => {
+    return new Promise ((resolve) => {
+        setTimeout(() => {
+            resolve(products.filter(prod => prod.category === categoryId))
+        }, 500)
+    })
+}
+
+export const getProductsByMarca = (marcaId) => {
+    return new Promise ((resolve) => {
+        setTimeout(() => {
+            resolve(products.filter(prod => prod.marca === marcaId))
+        }, 500)
     })
 }

@@ -5,11 +5,12 @@ import CarWidget from '../CarWidget/CarWidget';
 
 
 
+
 const NavBar = () => {
   return (
     <nav>
       <h1> 
-      <img src={Logo} className='logo'></img>
+      <img src={Logo} className='logo' alt=''></img>
       </h1>
       <div className='menu-ecommerce'>
         <button>Home</button>

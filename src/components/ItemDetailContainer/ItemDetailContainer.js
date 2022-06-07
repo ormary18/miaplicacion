@@ -1,18 +1,29 @@
 import React from 'react'
 import {useEffect, useState} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
-import { getProducts } from '../Productos/Productos'
-
+import { getProductsId } from '../Productos/Productos'
+import { useParams } from 'react-router-dom'
 
 
 
 
 const ItemDetailContainer = () => {
+  const [product, setProduct] = useState()
+
+  const {Id} = useParams()
+
+
+  useEffect(() => {
+    getProductsId(Id).then(response =>{
+      setProduct(response)
+
+    })
+  }, [])
    
   return (
        <div> 
-            
-            <ItemDetail {...getProducts}/>
+            <h1>Detalle del Producto</h1>
+            <ItemDetail {...product}/>
         
         </div>
   )
