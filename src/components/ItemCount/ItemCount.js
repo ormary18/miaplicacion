@@ -1,36 +1,37 @@
 import React from "react";
-import {useState} from "react";
-import './ItemCount.css';
+import { useState, useEffect } from "react";
+import "./ItemCount.css";
 
+const ItemCount = ({ stock, onAdd, initial }) => {
+  const [count, setCount] = useState(parseInt(initial));
 
-const ItemCount = ({stock}) => {
+  const sumar = () => {
+    setCount(count + 1);
+  };
 
-    const [count, setCount] = useState(0);
+  const restar = () => {
+    setCount(count - 1);
+  };
 
-    const sumar = () => {
-        if(count < stock) {
-            setCount(count + 1)
-        }
-    }
+  useEffect(() => {
+      setCount(parseInt(initial));
 
-    const restar = () => {
-        if(count > 0) {
-            setCount(count - 1)
-        }
-    }
+  }, [initial]);
 
-    
-
-    return(        
-        <div className="card-count">
-            <div onClick={restar}>-</div>
-            <div>
-                <p>{count}</p>
-            </div>
-            <div onClick={sumar}>+</div>
-        </div>
-    )
-}
+  return (
+    <div className="card-count">
+      <button disabled={count <= 1} onClick={restar}>
+        -
+      </button>
+      <p>{count}</p>
+      <button disabled={count >= stock} onClick={sumar}>
+        +
+      </button>
+      <button disabled={stock <= 0} onClick={() => onAdd(count)}>
+        Agregar al Carrito
+      </button>
+    </div>
+  );
+};
 
 export default ItemCount;
-
