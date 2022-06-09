@@ -1,0 +1,9 @@
+.lista-productos{
+    display: grid;
+    text-align: center;
+}
+
+#regalo{
+    width: 400px;
+    justify-self: unset;
+}

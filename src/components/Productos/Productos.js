@@ -1,5 +1,4 @@
 
-
 const products = [
     { 
         id: '1', 
@@ -30,7 +29,7 @@ const products = [
 
 
 
-export const getProducts = () => {
+export const getData = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products)
@@ -50,14 +49,6 @@ export const getProductsByCategory = (categoryId) => {
     return new Promise ((resolve) => {
         setTimeout(() => {
             resolve(products.filter(prod => prod.category === categoryId))
-        }, 500)
-    })
-}
-
-export const getProductsByMarca = (marcaId) => {
-    return new Promise ((resolve) => {
-        setTimeout(() => {
-            resolve(products.filter(prod => prod.marca === marcaId))
         }, 500)
     })
 }
