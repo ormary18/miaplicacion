@@ -7,10 +7,11 @@ import {link} from "react-router-dom";
 
 const ItemDetail = ({id, description, name, price, stock}) => {
 
-const [goToCart, setGoToCart] =useState(); 
+const [goToCart, setGoToCart] = useState(0); 
 
-const onAdd = (cantidad) =>{
-  setGoToCart(cantidad);
+const onAdd = (count) =>{
+  console.log(count)
+  setGoToCart(count);
 }
 
   return (
@@ -27,8 +28,12 @@ const onAdd = (cantidad) =>{
 
 
       <div>
-        {goToCart ? <link to ='/'Cart>Finalizar compra</link> : <ItemCount stock={10} onAdd={onAdd} initial={1} />}
+        {
+        goToCart >0 
+        ? <link to ='/cart'>Finalizar compra</link> : <ItemCount stock={stock} onAdd={onAdd} initial={1} />
+        }
       </div>
+
     </div>
   );
 };

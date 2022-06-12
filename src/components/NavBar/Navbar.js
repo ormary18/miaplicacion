@@ -26,7 +26,7 @@ const NavBar = () => {
         <button>Contacto</button>
         <button>Blog</button>
       </div>
-      <NavLink to={"./cart"}>
+      <NavLink to={"/cart"}>
         <CarWidget />
       </NavLink>
     </nav>
