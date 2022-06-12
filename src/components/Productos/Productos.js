@@ -5,7 +5,7 @@ const products = [
         name: 'Cuadro Personalizado', 
         img: './imagen/cuadro1.jpg',
         price: 50, 
-        category: 'Arte', 
+        category: 'Diseño', 
         stock: 15, 
         description:'Un regalo a la medida, un cuadro personalizado con todas las caracteristicas del cliente'
     },
@@ -21,7 +21,7 @@ const products = [
     { id: '3', 
     name: 'Personalización de Zapatillas', 
     price: 45, 
-    category: 'Arte', 
+    category: 'Personalizacion', 
     img:'./imagen/Zapatillas.jpg', 
     stock: 5, 
     description:'Zapatillas con dibujos artisticos'}
@@ -45,10 +45,11 @@ export const getProductsId = (id) => {
     })
 }
 
-export const getProductsByCategory = (categoryId) => {
+export const getProductsByCategory = (categoriaId) => {
     return new Promise ((resolve) => {
         setTimeout(() => {
-            resolve(products.filter(prod => prod.category === categoryId))
+            resolve(products.filter(prod => prod.category === categoriaId))
         }, 500)
     })
+
 }

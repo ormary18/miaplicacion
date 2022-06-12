@@ -4,8 +4,9 @@ import './Item.css'
 
 
 
+const Item = ({id, name, img}) => {
+  
 
-const Item = ({id, name, img, }) => {
     return (
         <div className='lista'>
         <h1>{id}</h1>

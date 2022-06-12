@@ -13,9 +13,8 @@ function App() {
        <BrowserRouter>
           <NavBar />
           <Routes>
-            <Route path='/' element={<ItemListContainer greeting="Productos"/>}/>
-            <Route path='/categoria' element={<ItemListContainer />}/>
-            <Route path='/carta' element={<cart />}/>
+            <Route path='/' element={<ItemListContainer greeting="Bienvenidos"/>}/>
+            <Route path='/categoria/:categoriaId' element={<ItemListContainer greeting="El Arte de hacer las cosas con Amor"/>}/>
             <Route path='/detalle/:productId' element={<ItemDetailContainer />}/>
             <Route path='*' element={<h1>PAGE NOT FOUND 403</h1>} />
           </Routes>
