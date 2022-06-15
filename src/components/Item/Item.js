@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom'
 import './Item.css'
+import { CartContext } from '../../context/CartContext';
 
 
 
 const Item = ({id, name, img}) => {
   
+
 
     return (
         <div className='lista'>

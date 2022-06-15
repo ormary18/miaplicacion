@@ -7,7 +7,7 @@ import { getProductsId } from '../Productos/Productos'
 
 
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({setCart}) => {
   const [product, setProduct] = useState({});
 
 
@@ -19,7 +19,7 @@ useEffect(() => {
   getProductsId(productId).then(response => {
       setProduct(response)
   })
-}, [])
+}, [productId])
 
 
 
@@ -27,7 +27,7 @@ useEffect(() => {
   return (
        <div> 
             <h1 className='producto'>Detalle del Producto</h1>
-            <ItemDetail {...product}  />
+            <ItemDetail {...product} setCart={setCart} />
         
         </div>
   )
