@@ -27,7 +27,7 @@ useEffect(() => {
   return (
        <div> 
             <h1 className='producto'>Detalle del Producto</h1>
-            <ItemDetail {...product} setCart={setCart} />
+            <ItemDetail {...product}/>
         
         </div>
   )

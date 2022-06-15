@@ -40,7 +40,8 @@ setCart([...cart, {...item, quantity}]);
     removeProduct,
     addProduct,
     totalPrice,
-    totalProducts
+    totalProducts,
+    cart
   }}>
 {children}
     </CartContext.Provider>
