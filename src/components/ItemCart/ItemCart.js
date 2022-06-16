@@ -7,7 +7,7 @@ const ItemCart = ({prod}) => {
 return (
 
     <div>
-        <p>Título: {prod.name}</p>
+        <p>Nombre: {prod.name}</p>
         <p>Cantidad: {prod.quantity}</p>
         <p>precio: ${prod.price}</p>
         <p>subtotal: ${prod.quantity * prod.price} </p>

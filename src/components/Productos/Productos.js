@@ -3,7 +3,7 @@ const products = [
     { 
         id: '1', 
         name: 'Cuadro Personalizado', 
-        img: './imagen/cuadro1.jpg',
+        img: '/imagen/cuadro1.jpg',
         price: 50, 
         category: 'Diseño', 
         stock: 15, 
@@ -14,7 +14,7 @@ const products = [
     name: 'Taza personalizada', 
     price: 30, 
     category: 'Arte', 
-    img:'./imagen/Taza.jpg',
+    img:'/imagen/Taza.jpg',
     stock: 10, 
     description:'Taza personalizada blanco y negro con caja y envoltura para regalo'},
 
@@ -22,7 +22,7 @@ const products = [
     name: 'Personalización de Zapatillas', 
     price: 45, 
     category: 'Personalizacion', 
-    img:'./imagen/Zapatillas.jpg', 
+    img:'/imagen/Zapatillas.jpg', 
     stock: 5, 
     description:'Zapatillas con dibujos artisticos'}
 ]

@@ -1,5 +1,4 @@
 import React from "react";
-import CarWidget from "../CarWidget/CarWidget";
 import { useCartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import ItemCart from '../ItemCart/ItemCart'
